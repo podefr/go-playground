@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package store;
+
+service Store {
+    rpc SetStore (SetStoreRequest) returns (SetStoreReply) {}
+}
+
+message SetStoreRequest {
+    string txt = 1;
+}
+
+message SetStoreReply {
+    string message = 1;
+}
