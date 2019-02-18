@@ -1,0 +1,16 @@
+{
+  "name": "user1",
+  "version": "1.0.0",
+  "description": "a node.js user of the Store protobuf server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Olivier Scherrer",
+  "license": "MIT",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.4.0",
+    "google-protobuf": "^3.7.0-rc.2",
+    "grpc": "^1.18.0"
+  }
+}

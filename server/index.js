@@ -1,4 +1,4 @@
-const PROTO_PATH = `${ __dirname }/store.proto`;
+const PROTO_PATH = `${ __dirname }/../Store/store.proto`;
 
 const grpc = require('grpc');
 const protoLoader = require('@grpc/proto-loader');
@@ -18,9 +18,11 @@ const storeProto = grpc.loadPackageDefinition(packageDefinition).store;
 const Store = {};
 
 function SetStore(call, callback) {
-    Store.bag = call.request.bag;
+    Store.txt = call.request.txt;
 
-    callback(null, 'OK');
+    console.log(`Store state is now: ${JSON.stringify(Store)}`);
+
+    callback(null, {message: 'OKAY'});
 }
 
 function main() {
